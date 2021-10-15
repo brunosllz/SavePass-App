@@ -31,7 +31,6 @@ export function Home() {
   async function loadData() {
     const dataKey = '@savepass:logins';
     
-    // Get asyncStorage data, use setSearchListData and setData
     const response = await AsyncStorage.getItem(dataKey);
 
     if(response) {
@@ -42,9 +41,7 @@ export function Home() {
     }
   }
 
-  function handleFilterLoginData() {
-    // Filter results inside data, save with setSearchListData
-    
+  function handleFilterLoginData() {    
     const dataFiltted = searchListData.filter(item => {
       const isValid = item.service_name
         .toLowerCase()

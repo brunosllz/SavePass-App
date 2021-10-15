@@ -41,9 +41,7 @@ export function RegisterLoginData() {
     resolver: yupResolver(schema)
   });
 
-  async function handleRegister(formData: FormData) {
-    // Save data on AsyncStorage and navigate to 'Home' screen
-    
+  async function handleRegister(formData: FormData) {   
     const newLoginData = {
       id: String(uuid.v4()),
       ...formData
